@@ -1,0 +1,158 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(253, 253, 253);
+  font-family: "Trebuchet MS";
+}
+
+.content {
+  grid-area: content;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #6495ed;
+  justify-content: center;
+}
+
+.footer {
+  grid-area: footer;
+
+  display: flex;
+  background: #f0ffff;
+}
+
+.container {
+  font-size: 1.5em;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "sidebar" "content" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 80px 25px;
+}
+
+.content,
+.sidebar,
+.footer {
+  padding: 1.5em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+nav li {
+  list-style: none;
+  padding: 1em 0;
+}
+
+nav li a {
+  color: white;
+  font-weight: 700;
+  opacity: 0.6;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav li a:hover {
+  opacity: 1;
+}
+
+.inside {
+  max-width: 90 px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inside h1 {
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 0em;
+  color: rgb(0, 0, 0);
+}
+
+.inside h2 {
+  line-height: 300%;
+  color: rgb(24, 4, 5);
+}
+
+.inside p {
+  font-weight: 200;
+  line-height: 1em;
+  color: #00545e;
+}
+
+.under {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-left: 20px;
+}
+
+footer p {
+  font-style: inherit;
+  font-size: 0.8em;
+}
+
+@media (min-width: 1040px) {
+  .container {
+    grid-template-areas: "sidebar content" "sidebar footer";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 300px 1f;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .sidebar {
+    padding-top: 9em;
+    height: 100%;
+    width: 200px;
+  }
+  .inside {
+    text-align: left;
+    margin: 6em 0;
+  }
+  .inside img {
+    width: 200px;
+    float: right;
+  }
+
+  .inside h1 {
+    height: 1px;
+    font-size: 3em;
+  }
+
+  .inside p {
+    width: 60%;
+  }
+
+  footer ul {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2em 0;
+  }
+
+  footer ul li a img {
+    width: 30%;
+  }
+}
